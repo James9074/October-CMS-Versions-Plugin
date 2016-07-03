@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+
+    software_id:
+        label: Software
+        disabled: false
+        type: dropdown
+        options: listSoftware
+
+    version:
+        label: Version
+        disabled: false
+

@@ -1,0 +1,8 @@
+1.0.1: First version of versions
+1.0.2:
+  - Created Softwares Table
+  - create_softwares_table.php
+  - Created Version Table
+  - create_versions_table.php
+  - Created Seed
+  - seed_all_tables.php

@@ -1,0 +1,27 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    posts:
+        label: Posts
+        select: >
+            (
+                select count(*)
+                from `james_versions_post_versions`
+                where `james_versions_post_versions`.`version_id` = `james_versions_versions`.`id`
+            )
+
+    software_id:
+        label: Software
+        searchable: true
+        relation: software
+        select: name
+
+    version:
+        label: Version
+        searchable: true

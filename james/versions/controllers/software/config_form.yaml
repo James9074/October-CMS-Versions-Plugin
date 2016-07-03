@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Software
+
+# Model Form Field configuration
+form: $/james/versions/models/software/fields.yaml
+
+# Model Class name
+modelClass: James\Versions\Models\Software
+
+# Default redirect location
+defaultRedirect: james/versions/software
+
+# Create page
+create:
+    title: Create Software
+    redirect: james/versions/software/update/:id
+    redirectClose: james/versions/software
+
+# Update page
+update:
+    title: Edit Software
+    redirect: james/versions/software
+    redirectClose: james/versions/software
+
+# Preview page
+preview:
+    title: Preview Software

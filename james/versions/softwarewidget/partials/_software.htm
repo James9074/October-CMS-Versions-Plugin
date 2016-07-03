@@ -1,0 +1,31 @@
+<div class="report-widget">
+    <h3><?= $this->property('title') ?></h3>
+
+    <?php if( $this->property('showList') ): ?>
+    <ul class="list-nostyle">
+        <?php foreach( $software as $software_package ): ?>
+        <li class="list-group-item"><a href="/backend/james/versions/software/update/<?= $software_package->id ?>"><?= $software_package->name ?></a></li>
+        <?php endforeach ?>
+    </ul>
+
+    <br/>
+    <?php endif; ?>
+    <form></form>
+    <h3>Add Software</h3>
+
+    <?= Form::open([
+            'url'       => Backend::url('james/versions/software/store'),
+    'method'    => 'POST'
+    ]);
+    ?>
+    <div class="form-group">
+        <input class="form-control" name="name" id="" cols="30" rows="10" placeholder="Unity3D" required>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Submit" />
+        <a style="float:right;" href="<?= Backend::url('james/versions/software/index') ?>">Manage software</a>
+    </div>
+
+    <?= Form::close(); ?>
+</div>

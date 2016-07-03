@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Version
+
+# Model Form Field configuration
+form: $/james/versions/models/version/fields.yaml
+
+# Model Class name
+modelClass: James\Versions\Models\Version
+
+# Default redirect location
+defaultRedirect: james/versions/versions
+
+# Create page
+create:
+    title: Create Version
+    redirect: james/versions/versions/update/:id
+    redirectClose: james/versions/versions
+
+# Update page
+update:
+    title: Edit Version
+    redirect: james/versions/versions
+    redirectClose: james/versions/versions
+
+# Preview page
+preview:
+    title: Preview Version
